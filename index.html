@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/map.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoVenturer</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg0-qxr7Y4AYsKS7UpGnpmvFp5sC4e92c&libraries=places"></script>
+    <link href="/src/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="flex h-screen">
+      <!-- Map Container -->
+      <div id="map" class="flex-1"></div>
+      
+      <!-- Sidebar -->
+      <div class="w-96 bg-white shadow-lg overflow-y-auto">
+        <div class="p-4">
+          <h1 class="text-2xl font-bold mb-4">GeoVenturer</h1>
+          
+          <!-- Search Box -->
+          <div class="mb-4">
+            <input 
+              type="text" 
+              id="search-box"
+              placeholder="Search locations..."
+              class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+          </div>
+          
+          <!-- Controls -->
+          <div class="flex gap-2 mb-4">
+            <button 
+              id="measure-btn"
+              class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+            >
+              Measure Distance
+            </button>
+            <button 
+              id="clear-btn"
+              class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+            >
+              Clear All
+            </button>
+          </div>
+          
+          <!-- Flash Cards Container -->
+          <div id="flash-cards" class="space-y-4"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
